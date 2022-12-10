@@ -15,11 +15,11 @@ public class novo
 
 
 
-
-
+    
 
     
     public void setNome(int nome) {
         this.nome = nome;
 
+    }
 }

@@ -10,4 +10,16 @@ public class novo
     public void setNum(int num) {
         this.num = num;
     }
+
+
+
+
+
+
+
+
+    
+    public void setNome(int nome) {
+        this.nome = nome;
+
 }

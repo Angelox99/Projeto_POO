@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Colaborador extends Funcionario{
+    
     
     
     // NOME DO FUNCIONARIO -----------

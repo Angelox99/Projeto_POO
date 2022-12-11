@@ -1,7 +1,9 @@
 import java.util.Scanner;
 import java.util.*;
+import java.util.ArrayList;
 public class Estoque 
 {
+   
     public void menu()
     {
         System.out.println("|----------------------------------------|");
@@ -50,7 +52,7 @@ public class Estoque
         //CHECAGEM ----------------------------------------
         // Almoxarife Almo = new Almoxarife();
 
-        if (USUARIO.equals("Mauricio") && SENHA.equals("789"))
+    if (USUARIO.equals("Mauricio") && SENHA.equals("789"))
         {
             System.out.printf("\n !Usuario %s logado com SUCESSO!\n\n",USUARIO); 
             menuAlmoxarifado();
@@ -111,12 +113,13 @@ public class Estoque
         switch (s) 
         {
             case 1:
-                Material M = new Material();
+                
                 menuAlmoxarifado();
             break;
             
             case 2:
-                
+                Almoxarife Mauricio = new Almoxarife();
+                Mauricio.armazenarMaterial();
                 menuAlmoxarifado();
             break;
 
@@ -165,12 +168,12 @@ public class Estoque
         switch (s) 
         {
             case 1:
-                Material M = new Material();
+               
                 menuColaborador();
             break;
             
             case 2:
-
+                
             break;
 
             case 3:
@@ -190,6 +193,11 @@ public class Estoque
     public void novoMaterial()
     {
 
+    }
+
+    public void armazena(){
+        
+        
     }
 
 

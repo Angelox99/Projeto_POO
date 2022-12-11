@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 
 public abstract class Funcionario {
+
+    
     // NOME DO FUNCIONARIO -----------
     protected String nome;
     public String getNome() {

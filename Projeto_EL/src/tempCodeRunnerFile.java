@@ -1,2 +1,1 @@
-        // // Estoque menu = new Estoque();
- 
+ Mauricio.armazenarMaterial();

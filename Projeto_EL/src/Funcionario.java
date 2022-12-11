@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public abstract class Funcionario {
     // NOME DO FUNCIONARIO -----------
     protected String nome;
@@ -31,4 +32,6 @@ public abstract class Funcionario {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
+
+    
 }

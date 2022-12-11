@@ -1,5 +1,5 @@
 public class Material {
-    // CODIGO DO MATERIAL -----------
+    // CODIGO DO MATERIAL -----------------------
     int CodigoM;
     public int getCodigoM() {
         return CodigoM;
@@ -8,6 +8,7 @@ public class Material {
         CodigoM = codigoM;
     }
     
+    // QUANTIDADE DO MATERIAL -------------------
     int QuantidadeM;
     public int getQuantidadeM() {
         return QuantidadeM;
@@ -16,6 +17,7 @@ public class Material {
         QuantidadeM = quantidadeM;
     }
 
+    // NOME DO MATERIAL -------------------------
     String NomeM;
     public String getNomeM() {
         return NomeM;
@@ -24,6 +26,7 @@ public class Material {
         NomeM = nomeM;
     }
 
+    // TIPO DO MATERIAL -------------------------
     String TipoM;
     public String getTipoM() {
         return TipoM;
@@ -32,6 +35,7 @@ public class Material {
         TipoM = tipoM;
     }
 
+    // DATA DE ENTRADA DO MATERIAL --------------
     String DataEM;
     public String getDataEM() {
         return DataEM;
@@ -40,6 +44,7 @@ public class Material {
         DataEM = dataEM;
     }
 
+    // DATA DE SAIDA DO MATERIAL ----------------
     String DataSM;
     public String getDataSM() {
         return DataSM;

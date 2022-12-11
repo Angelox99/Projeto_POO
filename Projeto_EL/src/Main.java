@@ -8,10 +8,5 @@ public class Main
         Estoque menu = new Estoque();
         menu.menu();
 
-        System.out.println("Hello, World!");
-        Material M = new Material();
-            
-        Almoxarife A1 = new Almoxarife();
-        
     }
 }

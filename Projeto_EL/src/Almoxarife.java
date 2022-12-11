@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+
 public class Almoxarife extends Funcionario implements ConsultarEstoque, RetirarMaterial, NovoMaterial, ReservarMaterial,ArmazenarMaterial{
     
+    
+
     public String getCargo() {
 
     return super.getCargo();
@@ -41,17 +45,12 @@ public class Almoxarife extends Funcionario implements ConsultarEstoque, Retirar
     public void criarMaterial(Material nome){
     
         Material M = new Material();
-        M.setCodigoM(99);
-        M.setDataEM("10/12/2022");
-        M.setDataSM("11/12/2022");
-        M.setNomeM("Bola");
-        M.setQuantidadeM(9);
-        M.setTipoM("esporte");
+
     }
 
     //------------------ARMAZENAR MATERIAL-------------------
-    public void amazenarMaterial(){
-
+    public void armazenarMaterial(Material nome){
+        
     }
 
     //-----------------------CONSULTAR-----------------------

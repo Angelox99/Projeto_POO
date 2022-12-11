@@ -17,16 +17,13 @@ public class Estoque
         switch (s) 
         {
             case 1:
-            Login();
-            
+                Login();
             break;
             
             case 2:
-            System.out.println("\n\n--!ADEUS!--\n\n");
-            
+                System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
             break;
         
-    
             default:
             break;
         }
@@ -35,8 +32,8 @@ public class Estoque
     // LOGIN - USUARIO E SENHA -----------------------
     public void Login ()
     {
-        //USUARIO -------------------------
         Scanner in = new Scanner(System.in);
+        //USUARIO -------------------------
         System.out.println("USUARIO: ");
         String USUARIO = in.nextLine();
         
@@ -47,7 +44,7 @@ public class Estoque
         //CHECAGEM ----------------------------------------
         if (USUARIO.equals("Angelo") && SENHA.equals("009900"))
         {
-            System.out.printf("Usuario %s logado com SUCESSO!",USUARIO); 
+            System.out.printf("Usuario %s logado com SUCESSO!\n\n",USUARIO); 
             menuFuncionario();
         }
         else
@@ -97,12 +94,17 @@ public class Estoque
             break;
             
             case 6:
-                System.out.println("\n\n--!ADEUS!--\n\n");
+                System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
             break;
    
             default:
             break;
         }
+
+    }
+
+    public void novoMaterial()
+    {
 
     }
 

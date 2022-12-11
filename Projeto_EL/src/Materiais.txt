@@ -1,0 +1,14 @@
+ELETRONICOS:
+RTX 4090
+intel i9 12g
+Monitor LG 30`
+
+ELETRICOS:
+Lampada
+Tomada
+Disjuntor
+
+CONSTRUCAO:
+Prego
+Parafuso
+Alicate

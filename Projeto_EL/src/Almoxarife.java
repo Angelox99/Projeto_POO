@@ -1,4 +1,4 @@
-public class Almoxarife extends Funcionario implements ContultarEstoque{
+public class Almoxarife extends Funcionario implements ConsultarEstoque, RetirarMaterial, NovoMaterial, ReservarMaterial,ArmazenarMaterial{
     
     public String getCargo() {
 
@@ -27,4 +27,51 @@ public class Almoxarife extends Funcionario implements ContultarEstoque{
     super.setNome(nome);
     }
 
+
+
+    //----------------------ATRIBUIÇÕES----------------------
+    //--------------------CRIAR MATERIAL---------------------
+    public void criarMaterial(Material nome){
+    
+        Material M = new Material();
+        M.setCodigoM(99);
+        M.setDataEM("10/12/2022");
+        M.setDataSM("11/12/2022");
+        M.setNomeM("Bola");
+        M.setQuantidadeM(9);
+        M.setTipoM("esporte");
+    }
+    
+    //------------------ARMAZENAR MATERIAL-------------------
+    public void amazenarMaterial(){
+
+    }
+
+    //-----------------------CONSULTAR-----------------------
+    public void consultaNomeMaterial(){
+         
+    }
+    public void consultaCodigoMaterial(){
+        
+    }
+    public void consultaTipoMaterial(){
+        
+    }
+    public void consultaDataEntradaMaterial(){
+        
+    }
+    public void consultaDataSaidaMaterial(){
+        
+    }
+    
+    //------------------RETIRAR MATERIAL-------------------
+
+    public void retirarMaterial(){
+
+    }
+
+    //-----------------RESERVAR MATERIAL-------------------
+    public void reservarMaterial(){
+
+    }
 }

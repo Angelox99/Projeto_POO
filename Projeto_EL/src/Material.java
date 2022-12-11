@@ -1,6 +1,24 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
 public class Material {
-    // CODIGO DO MATERIAL -----------
+   
+    String NomeM;
     int CodigoM;
+    String TipoM;
+    int QuantidadeM;
+    String DataEM;
+    String DataSM;
+    Scanner ler = new Scanner(System.in);
+
+    Material(){
+        System.out.println("Nome do material:");	
+        NomeM = ler.nextLine();
+    }
+
+    // CODIGO DO MATERIAL -----------
+    
     public int getCodigoM() {
         return CodigoM;
     }
@@ -8,7 +26,8 @@ public class Material {
         CodigoM = codigoM;
     }
     
-    int QuantidadeM;
+    // QUANTIDADE DO MATERIAL -----------
+    
     public int getQuantidadeM() {
         return QuantidadeM;
     }
@@ -16,7 +35,8 @@ public class Material {
         QuantidadeM = quantidadeM;
     }
 
-    String NomeM;
+    // NOME DO MATERIAL -----------
+
     public String getNomeM() {
         return NomeM;
     }
@@ -24,7 +44,8 @@ public class Material {
         NomeM = nomeM;
     }
 
-    String TipoM;
+    // TIPO DO MATERIAL -----------
+    
     public String getTipoM() {
         return TipoM;
     }
@@ -32,7 +53,8 @@ public class Material {
         TipoM = tipoM;
     }
 
-    String DataEM;
+    // DATA DE ENTRADA DO MATERIAL -----------
+   
     public String getDataEM() {
         return DataEM;
     }
@@ -40,7 +62,7 @@ public class Material {
         DataEM = dataEM;
     }
 
-    String DataSM;
+    // DATA DE SAIDA DO MATERIAL -----------
     public String getDataSM() {
         return DataSM;
     }

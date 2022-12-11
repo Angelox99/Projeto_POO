@@ -7,8 +7,10 @@ public class Estoque
         System.out.println("|----------------------------------------|");
         System.out.println("|------------[ESTOQUE_LOCK]--------------|");
         System.out.println("|----------------------------------------|\n\n");
-        System.out.println("[1] - Login.\n");
-        System.out.println("[2] - Sair.\n");
+        System.out.println("|------------MENU-PRINCIPAL--------------|\n\n");
+        System.out.println("[1] - Almoxarifado.\n");
+        System.out.println("[2] - Colaborador.\n");
+        System.out.println("[3] - Sair.\n");
         
         System.out.printf("Escolha uma opcao: ");
         Scanner scanner = new Scanner(System.in);
@@ -17,10 +19,14 @@ public class Estoque
         switch (s) 
         {
             case 1:
-                Login();
+                LoginA();
             break;
             
             case 2:
+                LoginC();
+            break;
+            
+            case 3:
                 System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
             break;
         
@@ -30,42 +36,73 @@ public class Estoque
     }
 
     // LOGIN - USUARIO E SENHA -----------------------
-    public void Login ()
+    public void LoginA ()
     {
         Scanner in = new Scanner(System.in);
         //USUARIO -------------------------
-        System.out.println("USUARIO: ");
+        System.out.printf("USUARIO: ");
         String USUARIO = in.nextLine();
         
         //SENHA -------------------------
-        System.out.println("SENHA: ");
+        System.out.printf("SENHA: ");
         String SENHA = in.nextLine();
         
         //CHECAGEM ----------------------------------------
-        if (USUARIO.equals("Angelo") && SENHA.equals("009900"))
+        // Almoxarife Almo = new Almoxarife();
+
+        if (USUARIO.equals("Mauricio") && SENHA.equals("789"))
         {
-            System.out.printf("Usuario %s logado com SUCESSO!\n\n",USUARIO); 
-            menuFuncionario();
+            System.out.printf("\n !Usuario %s logado com SUCESSO!\n\n",USUARIO); 
+            menuAlmoxarifado();
+            
         }
         else
         {
-            System.out.printf("Usuario ou Senha INVALIDOS!\n\n");
+            System.out.printf("\n !Usuario ou Senha INVALIDOS!\n\n");
+            menu();
+        }
+    }
+    
+    public void LoginC ()
+    {
+        Scanner in = new Scanner(System.in);
+        //USUARIO -------------------------
+        System.out.printf("USUARIO: ");
+        String USUARIO = in.nextLine();
+        
+        //SENHA -------------------------
+        System.out.printf("SENHA: ");
+        String SENHA = in.nextLine();
+        
+        //CHECAGEM ----------------------------------------
+        // Almoxarife Almo = new Almoxarife();
+
+        if (USUARIO.equals("Angelo") && SENHA.equals("999"))
+        {
+            System.out.printf("\n !Usuario %s logado com SUCESSO!\n\n",USUARIO); 
+            menuColaborador();
+        }
+        else
+        {
+            System.out.printf("\n !Usuario ou Senha INVALIDOS!\n\n");
             menu();
         }
     }
 
 
-    public void menuFuncionario()
+    public void menuAlmoxarifado()
     {
         System.out.println("|----------------------------------------|");
         System.out.println("|------------[ESTOQUE_LOCK]--------------|");
         System.out.println("|----------------------------------------|\n\n");
+        System.out.println("|-----------MENU-ALMOXARIFADO------------|\n\n");
         System.out.println("[1] - Novo material.\n");
         System.out.println("[2] - Armazenar material.\n");
         System.out.println("[3] - Consultar material.\n");
-        System.out.println("[4] - Retirar material.\n");
-        System.out.println("[5] - Voltar.\n");
-        System.out.println("[6] - Sair.\n");
+        System.out.println("[4] - Reservar material.\n");
+        System.out.println("[5] - Retirar material.\n");
+        System.out.println("[6] - Voltar.\n");
+        System.out.println("[7] - Sair.\n");
         
         System.out.printf("Escolha uma opcao: ");
         Scanner scanner = new Scanner(System.in);
@@ -74,7 +111,62 @@ public class Estoque
         switch (s) 
         {
             case 1:
+                Material M = new Material();
+                menuAlmoxarifado();
+            break;
             
+            case 2:
+                
+                menuAlmoxarifado();
+            break;
+
+            case 3:
+
+                menuAlmoxarifado(); 
+            break;
+
+            case 4:
+                menuAlmoxarifado();
+            break;
+
+            case 5:
+    
+                menuAlmoxarifado();
+            break;
+            
+            case 6:
+                menu();
+            break;
+            
+            case 7:
+                System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
+            break;
+   
+            default:
+            break;
+        }
+
+    }
+    public void menuColaborador()
+    {
+        System.out.println("|----------------------------------------|");
+        System.out.println("|------------[ESTOQUE_LOCK]--------------|");
+        System.out.println("|----------------------------------------|\n\n");
+        System.out.println("|-----------MENU-COLABORADOR-------------|\n\n");
+        System.out.println("[1] - Consultar material.\n");
+        System.out.println("[2] - Reservar material.\n");
+        System.out.println("[3] - Voltar.\n");
+        System.out.println("[4] - Sair.\n");
+        
+        System.out.printf("Escolha uma opcao: ");
+        Scanner scanner = new Scanner(System.in);
+        int s = scanner.nextInt();
+        
+        switch (s) 
+        {
+            case 1:
+                Material M = new Material();
+                menuColaborador();
             break;
             
             case 2:
@@ -82,21 +174,13 @@ public class Estoque
             break;
 
             case 3:
-            
+                menu();
             break;
             
             case 4:
-            
-            break;
-
-            case 5:
-                Login();
-            break;
-            
-            case 6:
                 System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
             break;
-   
+
             default:
             break;
         }

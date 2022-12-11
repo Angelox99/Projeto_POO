@@ -113,7 +113,7 @@ public class Estoque
         switch (s) 
         {
             case 1:
-                
+                Material M = new Material();
                 menuAlmoxarifado();
             break;
             

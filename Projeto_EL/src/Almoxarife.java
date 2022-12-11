@@ -26,8 +26,15 @@ public class Almoxarife extends Funcionario implements ConsultarEstoque, Retirar
     public void setNome(String nome) {
     super.setNome(nome);
     }
+    // SENHA FUNCIONARIO ------
+    public int getSenha() {
+        return super.getSenha();
+    }
+    
+    public void setSenha(int senha) {
+        super.setSenha(senha);
 
-
+    }
 
     //----------------------ATRIBUIÇÕES----------------------
     //--------------------CRIAR MATERIAL---------------------
@@ -41,7 +48,7 @@ public class Almoxarife extends Funcionario implements ConsultarEstoque, Retirar
         M.setQuantidadeM(9);
         M.setTipoM("esporte");
     }
-    
+
     //------------------ARMAZENAR MATERIAL-------------------
     public void amazenarMaterial(){
 

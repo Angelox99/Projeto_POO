@@ -1,7 +1,6 @@
-import java.util.Scanner;
-
-
-public abstract class Funcionario {
+public class Colaborador extends Funcionario{
+    
+    
     // NOME DO FUNCIONARIO -----------
     protected String nome;
     public String getNome() {
@@ -34,13 +33,13 @@ public abstract class Funcionario {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
-    // SENHA FUNCIONARIO ------
-    protected int Senha;
-    public int getSenha() {
-        return Senha;
-    }
-    public void setSenha(int senha) {
-        this.Senha = senha;
-    }
     
+    public int getSenha() {
+        return super.getSenha();
+    }
+    // SENHA FUNCIONARIO ------
+    public void setSenha(int senha) {
+        super.setSenha(senha);
+
+    }
 }

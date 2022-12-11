@@ -17,7 +17,7 @@ public class Material {
         NomeM = ler.nextLine();
     }
 
-    // CODIGO DO MATERIAL -----------
+    // CODIGO DO MATERIAL -----------------------
     
     public int getCodigoM() {
         return CodigoM;
@@ -37,6 +37,8 @@ public class Material {
 
     // NOME DO MATERIAL -----------
 
+    // NOME DO MATERIAL -------------------------
+    
     public String getNomeM() {
         return NomeM;
     }
@@ -55,6 +57,9 @@ public class Material {
 
     // DATA DE ENTRADA DO MATERIAL -----------
    
+
+    // DATA DE ENTRADA DO MATERIAL --------------
+    
     public String getDataEM() {
         return DataEM;
     }

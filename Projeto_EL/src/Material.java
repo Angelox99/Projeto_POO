@@ -41,8 +41,6 @@ public class Material {
         QuantidadeM = quantidadeM;
     }
 
-    // NOME DO MATERIAL -----------
-
     // NOME DO MATERIAL -------------------------
     
     public String getNomeM() {
@@ -59,25 +57,5 @@ public class Material {
     }
     public void setTipoM(String tipoM) {
         TipoM = tipoM;
-    }
-
-    // DATA DE ENTRADA DO MATERIAL -----------
-   
-
-    // DATA DE ENTRADA DO MATERIAL --------------
-    
-    public String getDataEM() {
-        return DataEM;
-    }
-    public void setDataEM(String dataEM) {
-        DataEM = dataEM;
-    }
-
-    // DATA DE SAIDA DO MATERIAL -----------
-    public String getDataSM() {
-        return DataSM;
-    }
-    public void setDataSM(String dataSM) {
-        DataSM = dataSM;
     }
 }

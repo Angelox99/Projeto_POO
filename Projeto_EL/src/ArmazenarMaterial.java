@@ -1,3 +1,3 @@
 public interface ArmazenarMaterial {
-    public void armazenarMaterial(Material nome);
+    public void armazenarMaterial();
 }

@@ -49,7 +49,7 @@ public class Almoxarife extends Funcionario implements ConsultarEstoque, Retirar
     }
 
     //------------------ARMAZENAR MATERIAL-------------------
-    public void armazenarMaterial( nome){
+    public void armazenarMaterial(){
         
     }
 

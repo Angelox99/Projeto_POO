@@ -3,7 +3,9 @@ import java.util.*;
 import java.util.ArrayList;
 public class Estoque 
 {
-   
+    ArrayList<String> materials = new ArrayList<>();
+    ArrayList<Material> materials2 = new ArrayList<>();
+
     public void menu()
     {
         System.out.println("|----------------------------------------|");
@@ -114,17 +116,18 @@ public class Estoque
         {
             case 1:
                 Material M = new Material();
+                materials2.add(M);
                 menuAlmoxarifado();
             break;
             
             case 2:
-                Almoxarife Mauricio = new Almoxarife();
-                Mauricio.armazenarMaterial();
+                armazena();
                 menuAlmoxarifado();
             break;
 
             case 3:
-
+                System.out.println(materials.toString());
+                
                 menuAlmoxarifado(); 
             break;
 
@@ -215,5 +218,14 @@ public class Estoque
             System.out.println("\nNao e possivel reservar!");
             System.out.println("Quantidade Insuficiente!\n");
         }
+    }
+
+    public void armazena(){
+        Scanner ler = new Scanner(System.in);
+        String Objeto;
+
+        System.out.println("Nome do objeto a ser armazenado:");
+        Objeto = ler.nextLine();
+        materials.add(Objeto);
     }
 }

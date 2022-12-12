@@ -6,6 +6,10 @@ public class Estoque
     ArrayList<String> materials = new ArrayList<>();
     ArrayList<Material> materials2 = new ArrayList<>();
 
+    /**
+     * Menu principal onde seleciona o usuario
+     * @menu()
+     */
     public void menu()
     {
         System.out.println("|----------------------------------------|");
@@ -39,10 +43,14 @@ public class Estoque
         }
     }
 
-    // LOGIN - USUARIO E SENHA -----------------------
+    /**
+     * Login do Almoxarifado
+     * @loginA()     
+     * */
     public void LoginA ()
     {
         Scanner in = new Scanner(System.in);
+
         //USUARIO -------------------------
         System.out.printf("USUARIO: ");
         String USUARIO = in.nextLine();
@@ -52,9 +60,8 @@ public class Estoque
         String SENHA = in.nextLine();
         
         //CHECAGEM ----------------------------------------
-        // Almoxarife Almo = new Almoxarife();
 
-    if (USUARIO.equals("Mauricio") && SENHA.equals("789"))
+        if (USUARIO.equals("Mauricio") && SENHA.equals("789"))
         {
             System.out.printf("\n !Usuario %s logado com SUCESSO!\n\n",USUARIO); 
             menuAlmoxarifado();
@@ -67,6 +74,10 @@ public class Estoque
         }
     }
     
+    /**
+     * Login do Colaborador
+     * @LoginC()
+     */
     public void LoginC ()
     {
         Scanner in = new Scanner(System.in);
@@ -93,7 +104,10 @@ public class Estoque
         }
     }
 
-
+    /**
+     * Menu de opcoes para o usuario do almoxarifado onde se encontram os metodos do estoque
+     * menuAlmoxarifado()
+     */
     public void menuAlmoxarifado()
     {
         System.out.println("|----------------------------------------|");
@@ -114,37 +128,37 @@ public class Estoque
         
         switch (s) 
         {
-            case 1:
+            case 1:// Novo material
                 Material M = new Material();
                 materials2.add(M);
                 menuAlmoxarifado();
             break;
             
-            case 2:
+            case 2://Armazena Material
                 armazena();
                 menuAlmoxarifado();
             break;
 
-            case 3:
+            case 3://Consulta Material
                 ConsultarMateriais();
                 menuAlmoxarifado(); 
             break;
 
-            case 4:
+            case 4://Reserva Material
                 Reserva();
                 menuAlmoxarifado();
             break;
 
-            case 5:
+            case 5://Retira Material
                 retirar();
                 menuAlmoxarifado();
             break;
             
-            case 6:
+            case 6://Volta para o menu anterior
                 menu();
             break;
             
-            case 7:
+            case 7://Encerra o Estoque
                 System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
             break;
    
@@ -153,6 +167,11 @@ public class Estoque
         }
 
     }
+    
+    /**
+     * Menu do Colaborador onde se encontram as metodos que tem acesso
+     * menuColaborador()
+     */
     public void menuColaborador()
     {
         System.out.println("|----------------------------------------|");
@@ -170,21 +189,21 @@ public class Estoque
         
         switch (s) 
         {
-            case 1:
+            case 1://Consulta Material
                 ConsultarMateriais(); 
                 menuColaborador();
             break;
             
-            case 2:
+            case 2://Reserva Material
                 Reserva();
                 menuColaborador();
             break;
 
-            case 3:
+            case 3://Volta para o menu anterior
                 menu();
             break;
             
-            case 4:
+            case 4://Encerra o estoque
                 System.out.println("\n\n[ESTOQUE_LOCK]-AGRADECE\n\n");
             break;
 
@@ -194,6 +213,10 @@ public class Estoque
 
     }
 
+    /**
+     * Reserva a quantidade do material que deve ser retirado
+     * Reserva()
+     */
     public void Reserva()
     {
         String nome;
@@ -223,6 +246,11 @@ public class Estoque
         
     }
 
+    /**
+     * Armazena material existente aumentando a quantidade
+     * armazena()
+     * @return
+     */
     public void armazena(){
         Scanner ler = new Scanner(System.in);
         String nome;
@@ -244,6 +272,11 @@ public class Estoque
         }
     }
 
+    /**
+     * Retira a quantidade do material selecionado
+     * retirar()
+     * @return
+     */
     public void retirar(){
         Scanner ler = new Scanner(System.in);
         String nome;
@@ -267,10 +300,14 @@ public class Estoque
                 }
             }                   
         }
-       
-    
-    
     }
+
+    /**
+     * Consulta o material selecionado , retornando seus atributos,
+     * e caso digite TODOS retorna todos os materiais e seus atributos
+     * ConsultarMateriais()
+     * @return
+     */
     public void ConsultarMateriais(){
     
         Scanner ler = new Scanner(System.in);
@@ -299,6 +336,5 @@ public class Estoque
                 System.out.println("Codigo:"+materials2.get(j).CodigoM);
             }
         }
-
     }
 }

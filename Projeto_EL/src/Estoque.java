@@ -129,6 +129,7 @@ public class Estoque
             break;
 
             case 4:
+                Reserva();
                 menuAlmoxarifado();
             break;
 
@@ -190,15 +191,29 @@ public class Estoque
 
     }
 
-    public void novoMaterial()
+    public void Reserva()
     {
+        Material M = new Material();
+        Scanner in = new Scanner(System.in);
 
-    }
+        System.out.printf("Digite o material: ");
+        String material = in.nextLine();
+        M.setNomeM(material);
 
-    public void armazena(){
+
+        System.out.println("Digite a quantidade: ");
+        int quantidade = in.nextInt();
+        M.setQuantidadeM(quantidade);
         
-        
+        int quantidadeM=quantidade+1;
+        if (quantidadeM < quantidade) 
+        {
+            System.out.println("\nQuantidade Reservada!\n");
+        }
+        else
+        {
+            System.out.println("\nNao e possivel reservar!");
+            System.out.println("Quantidade Insuficiente!\n");
+        }
     }
-
-
 }

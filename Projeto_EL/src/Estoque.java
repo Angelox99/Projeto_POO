@@ -225,11 +225,23 @@ public class Estoque
 
     public void armazena(){
         Scanner ler = new Scanner(System.in);
-        String Objeto;
+        String nome;
+        int quantidade;
 
-        System.out.println("Nome do objeto a ser armazenado:");
-        Objeto = ler.nextLine();
-        materials.add(Objeto);
+        System.out.print("Nome do objeto a ser adicionado:");
+        nome = ler.nextLine();
+        System.out.print("Quantidade:");
+        quantidade = ler.nextInt();
+        
+        for (int i = 0; i<materials2.size();i++){
+            if(materials2.get(i).NomeM.equals(nome)){
+            
+                if(quantidade <= materials2.get(i).QuantidadeM){
+                    materials2.get(i).QuantidadeM = materials2.get(i).QuantidadeM + quantidade; 
+                    System.out.println("Quantidade Adicionada");
+                }
+            }                   
+        }
     }
 
     public void retirar(){

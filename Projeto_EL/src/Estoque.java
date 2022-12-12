@@ -126,8 +126,7 @@ public class Estoque
             break;
 
             case 3:
-                System.out.println(materials.toString());
-                
+                ConsultarMateriais();
                 menuAlmoxarifado(); 
             break;
 
@@ -137,7 +136,7 @@ public class Estoque
             break;
 
             case 5:
-    
+                retirar();
                 menuAlmoxarifado();
             break;
             
@@ -172,12 +171,13 @@ public class Estoque
         switch (s) 
         {
             case 1:
-               
+                ConsultarMateriais(); 
                 menuColaborador();
             break;
             
             case 2:
-                
+                Reserva();
+                menuColaborador();
             break;
 
             case 3:
@@ -196,28 +196,31 @@ public class Estoque
 
     public void Reserva()
     {
-        Material M = new Material();
+        String nome;
+        int quantidade;
         Scanner in = new Scanner(System.in);
-
-        System.out.printf("Digite o material: ");
-        String material = in.nextLine();
-        M.setNomeM(material);
-
-
-        System.out.println("Digite a quantidade: ");
-        int quantidade = in.nextInt();
-        M.setQuantidadeM(quantidade);
         
-        int quantidadeM=quantidade+1;
-        if (quantidadeM < quantidade) 
-        {
-            System.out.println("\nQuantidade Reservada!\n");
+        System.out.print("Digite o material: ");
+        nome = in.nextLine();
+
+        System.out.print("Digite a quantidade: ");
+        quantidade = in.nextInt();
+
+        for (int i = 0; i<materials2.size();i++){
+            if(materials2.get(i).NomeM.equals(nome)){
+            
+                if(quantidade <= materials2.get(i).QuantidadeM){
+                    System.out.println("Quantidade reservada");
+                }
+                else{
+                    System.out.println("Quantidade insuficiente");
+                }
+            }
+                                
         }
-        else
-        {
-            System.out.println("\nNao e possivel reservar!");
-            System.out.println("Quantidade Insuficiente!\n");
-        }
+        
+        
+        
     }
 
     public void armazena(){
@@ -227,5 +230,63 @@ public class Estoque
         System.out.println("Nome do objeto a ser armazenado:");
         Objeto = ler.nextLine();
         materials.add(Objeto);
+    }
+
+    public void retirar(){
+        Scanner ler = new Scanner(System.in);
+        String nome;
+        int quantidade;
+
+        System.out.print("Nome do objeto a ser retirado:");
+        nome = ler.nextLine();
+        System.out.print("Quantidade:");
+        quantidade = ler.nextInt();
+        
+        for (int i = 0; i<materials2.size();i++){
+            if(materials2.get(i).NomeM.equals(nome)){
+            
+                if(quantidade <= materials2.get(i).QuantidadeM){
+                    materials2.get(i).QuantidadeM = materials2.get(i).QuantidadeM - quantidade; 
+                    System.out.println("Quantidade retirada");
+            
+                }
+                else{
+                    System.out.println("Quantidade insuficiente");
+                }
+            }                   
+        }
+       
+    
+    
+    }
+    public void ConsultarMateriais(){
+    
+        Scanner ler = new Scanner(System.in);
+        String nome;
+       
+        System.out.print("Nome do objeto a ser consultado:");
+        nome = ler.nextLine();
+        
+        for (int i = 0; i<materials2.size();i++){
+           
+            if(materials2.get(i).NomeM.equals(nome)){
+                System.out.println("\n"+"Material:"+materials2.get(i).NomeM);
+                System.out.println("Tipo de Material:"+materials2.get(i).TipoM);
+                System.out.println("Quantidade:"+materials2.get(i).QuantidadeM);
+                System.out.println("Codigo:"+materials2.get(i).CodigoM);
+                
+            }
+            
+        }
+        if(nome.equals("TODOS")){
+            System.out.println("\n===================LISTA COMPLETA===================");
+            for (int j = 0; j<materials2.size();j++){
+                System.out.println("\n"+"Material:"+materials2.get(j).NomeM);
+                System.out.println("Tipo de Material:"+materials2.get(j).TipoM);
+                System.out.println("Quantidade:"+materials2.get(j).QuantidadeM);
+                System.out.println("Codigo:"+materials2.get(j).CodigoM);
+            }
+        }
+
     }
 }
